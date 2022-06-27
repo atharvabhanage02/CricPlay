@@ -1,0 +1,54 @@
+.navbar-wrapper {
+  background-color: var(--navbar-bg);
+  position: fixed;
+  height: 2.5rem;
+  top: 0;
+  border-bottom: 1px solid var(--txt-white);
+  z-index: 6;
+}
+.filter-icon {
+  color: var(--txt-white);
+  font-size: 1.56rem;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid var(--navbar-bg);
+  border-radius: 50%;
+}
+.filter-icon:hover {
+  transition: 0.3s;
+  border: 1px solid var(--txt-white);
+  background-color: var(--filter-icon-hover);
+}
+.navbar-wrapper {
+  margin-top: 0px;
+  border-radius: 0px;
+}
+[data-tooltip] {
+  position: relative;
+  cursor: default;
+}
+[data-tooltip]::after {
+  position: absolute;
+  width: fit-content;
+  right: calc(20% - 20px);
+  top: 95%;
+  text-align: center;
+  box-sizing: border-box;
+  color: black;
+  background-color: var(--txt-white);
+  border: 1px solid var(--notes-primary-color);
+  padding: 3px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: bold;
+  transform: translateX(10px);
+  transition: opacity 0.3s, transform 0.2s;
+  content: attr(data-tooltip);
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
