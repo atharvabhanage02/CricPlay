@@ -5,7 +5,7 @@ import { loginHandler } from "../../Utils/loginHandler";
 import { useAuth } from "../../Context/Auth/auth-context";
 import { useState } from "react";
 const Login = () => {
-  const { auth, setAuth } = useAuth();
+  const { setAuth } = useAuth();
   const navigate = useNavigate();
   const [user, setUser] = useState({
     email: "",

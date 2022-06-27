@@ -4,7 +4,7 @@
   margin: auto;
   margin-top: 7.5rem;
   border-radius: 1rem;
-  color: black;
+  color: var(--txt-black);
 }
 .login > h1 {
   color: var(--navbar-bg);

@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 :root {
   --vl-primary-color: #1d2947;
-  /* Navbar */
   --filter-icon-hover: #354477;
-  --txt-white: white;
-  --txt-black: black;
+  --txt-white: #ffffff;
+  --txt-black: #000000;
   --navbar-bg: #213061;
-  /* Login */
   --guest-login-btn-hover: #dcdcf8;
   --login-btn-hover: #34457f;
 }
@@ -21,7 +19,6 @@ body {
 .flex-center-row {
   display: flex;
   justify-content: space-evenly;
-  /* align-items: center; */
   flex-wrap: wrap;
 }
 
