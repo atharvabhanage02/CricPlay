@@ -68,7 +68,7 @@ const Login = () => {
             >
               Login as Guest
             </button>
-            <Link class="have-account-link" to="/Signup">
+            <Link class="have-account-link" to="/signup">
               Create new Account?
             </Link>
           </div>
