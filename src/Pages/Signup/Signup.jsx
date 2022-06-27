@@ -41,7 +41,7 @@ const Signup = () => {
             </div>
             <div class="reset-details">
               <div>
-                <input type="checkbox" class="checkbox" />I accept all the Terns
+                <input type="checkbox" class="checkbox" />I accept all the Terms
                 and conditions
               </div>
             </div>
