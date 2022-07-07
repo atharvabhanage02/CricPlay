@@ -29,7 +29,7 @@ const VideoProvider = ({ children }) => {
         console.log("error occured in useEffect while seeting VideosList");
       }
     })();
-  }, );
+  }, []);
   return (
     <VideosContext.Provider
       value={{
