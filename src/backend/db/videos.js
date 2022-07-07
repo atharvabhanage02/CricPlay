@@ -419,17 +419,4 @@ export const videos = [
     link: "https://www.youtube.com/embed/Mvs1JXYfd6Q?autoplay=1",
     category: "T20",
   },
-  {
-    _id: "PZTo9dlmju8",
-    title:
-      "Muttiah Muralitharan vs Graham Swann Coin hitting Challenge MUST SEE!!",
-    description: "",
-    channel: "Star Sports",
-    thumbnail:
-      "https://i.ytimg.com/an_webp/PZTo9dlmju8/mqdefault_6s.webp?du=3000&sqp=CIXnl5UG&rs=AOn4CLArtIDV-wKxHLUVdc12CMo1Puhwlg",
-    channelIcon:
-      "https://yt3.ggpht.com/ytc/AKedOLSucokengAtD6SUeu2cbP7UynP4_JpwRJ-DX05-=s68-c-k-c0x00ffffff-no-rj",
-    link: "https://www.youtube.com/embed/PZTo9dlmju8?autoplay=1",
-    category: "ODI",
-  },
 ];
