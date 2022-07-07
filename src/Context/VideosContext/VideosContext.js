@@ -1,9 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getVideos } from "../../Services/getVideos";
+import { useAuth } from "../Auth/auth-context";
 
 const VideosContext = createContext();
 const VideoProvider = ({ children }) => {
   const [videos, setVideos] = useState([]);
+  const { auth } = useAuth();
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [searchVal, setSearchVal] = useState("");
   const filterVideosFunc = (tag) => {
@@ -27,7 +29,7 @@ const VideoProvider = ({ children }) => {
         console.log("error occured in useEffect while seeting VideosList");
       }
     })();
-  }, []);
+  }, );
   return (
     <VideosContext.Provider
       value={{
