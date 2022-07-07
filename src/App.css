@@ -1,51 +1,27 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+:root {
+  --vl-primary-color: #1d2947;
+  --filter-icon-hover: #354477;
+  --txt-white: #ffffff;
+  --txt-black: #000000;
+  --navbar-bg: #213061;
+  --guest-login-btn-hover: #dcdcf8;
+  --login-btn-hover: #34457f;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--vl-primary-color);
+  color: var(--txt-white);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
+.flex-center-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
-}
-
-.brand-title span {
-  color: #ffde59;
-}
-
-.brand-description {
-  font-size: 1.4rem;
-}
-
-.links {
-  display: flex;
-}
-
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+.border-1p {
+  border: 1px solid var(--txt-white);
 }
