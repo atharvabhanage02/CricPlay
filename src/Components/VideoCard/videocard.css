@@ -1,0 +1,46 @@
+.video-card {
+  width: 19.37rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--txt-white);
+  position: relative;
+  margin-top: 1rem;
+}
+.video-thumbnail {
+  width: 19.37rem;
+  height: 12.5rem;
+  cursor: pointer;
+}
+.video-title {
+  flex-wrap: wrap;
+}
+.video-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.video-details > p {
+  font-weight: bold;
+}
+.video-options {
+  display: flex;
+  padding: 4px;
+  gap: 12px;
+  justify-content: space-between;
+}
+.channel-icon {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.vl-icon {
+  cursor: pointer;
+  padding: 2px;
+  border: 1px solid var(--vl-primary-color);
+}
+.vl-icon:hover {
+  border-radius: 50%;
+  background-color: var(--navbar-bg);
+  border: 1px solid var(--txt-white);
+}

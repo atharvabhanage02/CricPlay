@@ -2,11 +2,13 @@ import { FiLogOut } from "../../Utils/icons";
 import "./navbar.css";
 import { useAuth } from "../../Context/Auth/auth-context";
 import { Link } from "react-router-dom";
+import { useVideos } from "../../Context/VideosContext/VideosContext";
 export const Navbar = () => {
   const {
     auth: { isLogIn },
     logOutUser,
   } = useAuth();
+  const { setSearchVal, searchVal } = useVideos();
   return (
     <nav class="navbar">
       <div class="navbar-wrapper vl-navbar">
@@ -21,6 +23,7 @@ export const Navbar = () => {
             class="search-bar"
             aria-hidden="true"
             placeholder="Search"
+            onChange={(e) => setSearchVal(e.target.value)}
           />
         </div>
 
