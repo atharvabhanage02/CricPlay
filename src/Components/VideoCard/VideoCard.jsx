@@ -2,8 +2,9 @@ import "./videocard.css";
 import { BsThreeDotsVertical } from "../../Utils/icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { VideoMenu } from "../VideoMenu/VideoMenu";
 const VideoCard = ({ videoData }) => {
-  const [setOptions] = useState(false);
+  const [showOptions, setOptions] = useState(false);
   return (
     <div className="video-card">
       <div>
@@ -23,6 +24,12 @@ const VideoCard = ({ videoData }) => {
             onClick={() => setOptions((prev) => !prev)}
           />
         </div>
+        {showOptions && (
+          <VideoMenu
+            showOptionsMenu={setOptions}
+            videoData={videoData}
+          />
+        )}
       </div>
     </div>
   );

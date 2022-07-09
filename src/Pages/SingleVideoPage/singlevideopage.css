@@ -1,0 +1,11 @@
+.single-video-page-videos {
+  display: flex;
+}
+.video-category {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 22rem;
+  top: 5rem;
+  left: 30rem;
+}
