@@ -22,7 +22,7 @@ const SingleVideoPage = () => {
         console.log("error occured while setting single video list", error);
       }
     })();
-  }, []);
+  });
   const currentVideo = videos.find((video) => video?._id === params.videoId);
   const suggestedVideos = videos.filter(
     (video) =>
