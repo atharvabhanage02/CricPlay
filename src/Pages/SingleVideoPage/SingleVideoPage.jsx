@@ -10,8 +10,6 @@ import { VideoCard } from "../../Components/VideoCard/VideoCard";
 const SingleVideoPage = () => {
   const [singleVideo, setSingleVideo] = useState({});
   const { videos } = useVideos();
-  const { showPlaylistOption, setPlaylistOption } = useVideos();
-  // const [playlistModal, setPlaylistModal] = useState(false);
   const params = useParams();
   useEffect(() => {
     (async () => {
