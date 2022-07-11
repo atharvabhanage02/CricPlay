@@ -1,0 +1,23 @@
+.single-video-card {
+  position: relative;
+  width: fit-content;
+  top: 5rem;
+  left: 20rem;
+  width: 31.25rem;
+  height: 18.75rem;
+  color: var(--txt-white);
+}
+.vl-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.single-video-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.single-video-tag > p {
+  padding-left: 8px;
+}
