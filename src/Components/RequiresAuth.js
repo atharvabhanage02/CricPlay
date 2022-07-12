@@ -1,6 +1,5 @@
 import { useAuth } from "../Context/Auth/auth-context";
 import { Navigate } from "react-router-dom";
-
 const RequiresAuth = ({ children }) => {
   const {
     auth: { isLogIn },
