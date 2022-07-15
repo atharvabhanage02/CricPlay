@@ -7,6 +7,7 @@ import { SingleVideoPage } from "./Pages/SingleVideoPage/SingleVideoPage";
 import { WatchLaterPage } from "./Pages/Watch-Later-Page/WatchLaterPage";
 import { RequiresAuth } from "./Components/RequiresAuth";
 import Mockman from "mockman-js";
+import { LikePage } from "./Pages/Like-Page/LikePage";
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,14 @@ function App() {
             </RequiresAuth>
           }
         />
+        <Route
+          path="/liked"
+          element={
+            <RequiresAuth>
+              <LikePage />
+            </RequiresAuth>
+          }
+        /> 
         <Route path="/play/:videoId" element={<SingleVideoPage />} />
       </Routes>
     </div>
