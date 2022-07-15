@@ -10,25 +10,82 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/Auth/auth-context";
 import { useVideos } from "../../Context/VideosContext/VideosContext";
+import { useLikes } from "../../Context/LikeContext/LikeContext";
+import { useWatchLater } from "../../Context/WatchLaterContext/WatchLaterContext";
 const VideoMenu = ({ showOptionsMenu, videoData }) => {
   const { pathname } = useLocation();
   const { auth } = useAuth();
   const navigate = useNavigate();
   const { showPlaylistOption, setPlaylistOption } = useVideos();
+  const { addVideoToLike, removeVideoFromLikes, likedVideos } = useLikes();
+  const { watchLaterVideos, addVideoToWatchLater, removeVideoFromWatchLater } =
+    useWatchLater();
   return (
     <div className="vl-options-menu">
-      <div className="menu-icons">
-        <BiLike className="home-page-icons " />
-        <div>Like</div>
-      </div>
-      <div className="menu-icons">
-        <MdOutlineWatchLater className="home-page-icons " />
-        <div>Watch Later</div>
-      </div>
-      <div className="menu-icons">
-        <CgPlayList className="home-page-icons " />
-        <div>Playlist</div>
-      </div>
+      {pathname === "/history" ? (
+        <div className="menu-icons">
+          <RiHistoryLine className="home-page-icons " />
+          <div>Remove from History</div>
+        </div>
+      ) : (
+        <div>
+          {watchLaterVideos.find((item) => item._id === videoData._id) ? (
+            <div
+              className="menu-icons"
+              onClick={() =>
+                auth.isLogIn
+                  ? removeVideoFromWatchLater(videoData._id)
+                  : navigate("/login")
+              }
+            >
+              <CgPlayListCheck className="home-page-icons" />
+              <div>Remove from Watch Later</div>
+            </div>
+          ) : (
+            <div
+              className="menu-icons"
+              onClick={() =>
+                auth.isLogIn
+                  ? addVideoToWatchLater(videoData)
+                  : navigate("/login")
+              }
+            >
+              <MdOutlineWatchLater className="home-page-icons" />
+              <div>Watch Later</div>
+            </div>
+          )}
+          <div className="menu-icons">
+            <CgPlayList className="home-page-icons" />
+            <div>Playlists</div>
+          </div>
+          {likedVideos.find((item) => item._id === videoData._id) ? (
+            <div
+              className="menu-icons"
+              onClick={() => removeVideoFromLikes(videoData._id)}
+            >
+              <AiFillLike className="home-page-icons " />
+              <div>Remove from Likes</div>
+            </div>
+          ) : (
+            <div
+              className="menu-icons"
+              onClick={() =>
+                auth.isLogIn ? addVideoToLike(videoData) : navigate("/login")
+              }
+            >
+              <BiLike className="home-page-icons " />
+              <div>Like</div>
+            </div>
+          )}
+          {pathname === "/playlist/:playlistId" && (
+            <div className="menu-icons">
+              <RiHistoryLine className="home-page-icons " />
+              <div>Remove from Playlist</div>
+            </div>
+          )}
+          {/* Playlist Modal will come here */}
+        </div>
+      )}
     </div>
   );
 };
