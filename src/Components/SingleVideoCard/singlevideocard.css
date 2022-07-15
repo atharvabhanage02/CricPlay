@@ -21,3 +21,16 @@
 .single-video-tag > p {
   padding-left: 8px;
 }
+.vl-tag {
+  border: 1px solid var(--txt-white);
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 5px 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--txt-white);
+  background-color: var(--navbar-bg);
+  font-family: inherit;
+}
