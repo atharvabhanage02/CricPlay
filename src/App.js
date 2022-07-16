@@ -8,6 +8,7 @@ import { WatchLaterPage } from "./Pages/Watch-Later-Page/WatchLaterPage";
 import { RequiresAuth } from "./Components/RequiresAuth";
 import Mockman from "mockman-js";
 import { LikePage } from "./Pages/Like-Page/LikePage";
+import { History } from "./Pages/History/History";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,14 @@ function App() {
         <Route path="/" element={<Explore />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/history"
+          element={
+            <RequiresAuth>
+              <History />
+            </RequiresAuth>
+          }
+        />
         <Route
           path="/watch-later"
           element={
@@ -31,7 +40,7 @@ function App() {
               <LikePage />
             </RequiresAuth>
           }
-        /> 
+        />
         <Route path="/play/:videoId" element={<SingleVideoPage />} />
       </Routes>
     </div>

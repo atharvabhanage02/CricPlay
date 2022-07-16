@@ -1,15 +1,26 @@
 import "./videocard.css";
 import { BsThreeDotsVertical } from "../../Utils/icons";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { VideoMenu } from "../VideoMenu/VideoMenu";
+import { useHistory } from "../../Context/HistoryContext/HistoryContext";
 const VideoCard = ({ videoData }) => {
   const [showOptions, setOptions] = useState(false);
+  const { addVideoToHistory } = useHistory();
+  const navigate = useNavigate();
   return (
     <div className="video-card">
       <div>
         <Link to={`/play/${videoData._id}`}>
-          <img className="video-thumbnail" src={videoData.thumbnail} alt="" />
+          <img
+            className="video-thumbnail"
+            src={videoData.thumbnail}
+            alt=""
+            onClick={() => {
+              addVideoToHistory(videoData);
+              navigate(`/play/${videoData._id}`);
+            }}
+          />
         </Link>
       </div>
       <div className="video-options">
@@ -25,10 +36,7 @@ const VideoCard = ({ videoData }) => {
           />
         </div>
         {showOptions && (
-          <VideoMenu
-            showOptionsMenu={setOptions}
-            videoData={videoData}
-          />
+          <VideoMenu showOptionsMenu={setOptions} videoData={videoData} />
         )}
       </div>
     </div>
