@@ -8,15 +8,10 @@ import {
   deletePlaylist,
   deleteVideoFromPlaylist,
   getPlaylists,
-} from "../../Services/playlistServices";
+} from "../../Services/playlistService";
 import { useAuth } from "../../Context/Auth/auth-context";
 import { useVideos } from "../../Context/VideosContext/VideosContext";
 const PlayistOption = ({ videoData }) => {
-  // const [playlists, setPlaylists] = useState(["Amazing T20"]);
-  // const [playlistInput, setPlaylistInput] = useState("");
-  // const [playlistDesc, setPlaylistDesc] = useState("");
-
-  // ************************
   const [playlistInfo, setPlaylistInfo] = useState({
     title: "",
     description: "",

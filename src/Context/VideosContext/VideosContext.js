@@ -8,6 +8,7 @@ const VideoProvider = ({ children }) => {
   const { auth } = useAuth();
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [searchVal, setSearchVal] = useState("");
+  const [showPlaylistOption, setPlaylistOption] = useState(false);
   const filterVideosFunc = (tag) => {
     const filterResult = videos.filter((video) => video.category === tag);
     if (tag === "All") {
@@ -40,6 +41,8 @@ const VideoProvider = ({ children }) => {
         searchVal,
         setSearchVal,
         searchVideos,
+        showPlaylistOption,
+        setPlaylistOption,
       }}
     >
       {children}

@@ -13,6 +13,7 @@ import { useVideos } from "../../Context/VideosContext/VideosContext";
 import { useLikes } from "../../Context/LikeContext/LikeContext";
 import { useWatchLater } from "../../Context/WatchLaterContext/WatchLaterContext";
 import { useHistory } from "../../Context/HistoryContext/HistoryContext";
+import { PlayistOption } from "../Playlist-Option/PlaylistOption";
 const VideoMenu = ({ showOptionsMenu, videoData }) => {
   const { pathname } = useLocation();
   const { auth } = useAuth();
@@ -64,7 +65,15 @@ const VideoMenu = ({ showOptionsMenu, videoData }) => {
               <div>Watch Later</div>
             </div>
           )}
-          <div className="menu-icons">
+          <div
+            className="menu-icons"
+            onClick={() => {
+              auth.isLogIn
+                ? setPlaylistOption((prev) => !prev) &&
+                  showOptionsMenu((prev) => !prev)
+                : navigate("/login");
+            }}
+          >
             <CgPlayList className="home-page-icons" />
             <div>Playlists</div>
           </div>
@@ -94,6 +103,12 @@ const VideoMenu = ({ showOptionsMenu, videoData }) => {
             </div>
           )}
           {/* Playlist Modal will come here */}
+          {showPlaylistOption && (
+            <PlayistOption
+              videoData={videoData}
+              setPlaylistOption={setPlaylistOption}
+            />
+          )}
         </div>
       )}
     </div>
