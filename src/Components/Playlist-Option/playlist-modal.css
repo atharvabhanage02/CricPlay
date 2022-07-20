@@ -1,0 +1,69 @@
+.playlist-container {
+  position: absolute;
+  z-index: 2;
+}
+.playlist-section {
+  background-color: var(--navbar-bg);
+  display: flex;
+  width: 14.37rem;
+  flex-direction: column;
+  border: 1px solid var(--txt-white);
+  position: fixed;
+  left: 40%;
+  top: 40%;
+}
+.playlist-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--txt-white);
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.select-playlist {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid var(--txt-white);
+}
+.single-playlist-option {
+  display: flex;
+  padding: 2px;
+  align-items: center;
+}
+.single-playlist-option > p {
+  padding: 5px;
+}
+.close-modal {
+  cursor: pointer;
+  padding: 2px;
+  border: 1px solid var(--navbar-bg);
+}
+.close-modal:hover {
+  color: var(--dark-red);
+  border: 1px solid var(--dark-red);
+  border-radius: 50%;
+}
+.playlist-user-input {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.playlist-user-input > input {
+  padding: 4px;
+}
+.white-border {
+  border: 1px solid var(--txt-white);
+  width: 100%;
+}
+.disable-btn {
+  pointer-events: none;
+  background-color: red;
+  color: var(--txt-grey-400);
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
