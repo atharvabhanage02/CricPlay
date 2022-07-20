@@ -24,7 +24,7 @@ const Playlist = () => {
     }
   };
   return (
-    <div>
+    <>
       <Navbar />
       <Sidebar />
       <div className="vl-main-container flex-center-row gap-10">
@@ -39,7 +39,7 @@ const Playlist = () => {
                     <img
                       className="video-thumbnail"
                       src="assets/Thumbnail/video-1.webp"
-                      alt=""
+                      alt="Thumbnail"
                     />
                   </Link>
                 </div>
@@ -70,8 +70,7 @@ const Playlist = () => {
           })
         )}
       </div>
-    </div>
+    </>
   );
 };
 export { Playlist };
-

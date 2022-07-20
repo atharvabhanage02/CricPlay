@@ -123,7 +123,6 @@ const PlayistOption = ({ videoData }) => {
               onClick={() => {
                 createPlaylistFunc();
                 setPlaylistInfo({ title: "", description: "" });
-                // setTooglePlaylistOption((prev) => !prev);
               }}
             >
               Create Playlist
