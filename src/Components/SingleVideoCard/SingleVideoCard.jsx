@@ -15,7 +15,7 @@ const SingleVideoCard = ({ singleVideo }) => {
   const { likedVideos, addVideoToLike, removeVideoFromLikes } = useLikes();
   const { watchLaterVideos, addVideoToWatchLater, removeVideoFromWatchLater } =
     useWatchLater();
-  const { showPlaylistOption, setPlaylistOption } = useVideos();
+  // const { showPlaylistOption, setPlaylistOption } = useVideos();
   const { auth } = useAuth();
   const navigate = useNavigate();
   return (

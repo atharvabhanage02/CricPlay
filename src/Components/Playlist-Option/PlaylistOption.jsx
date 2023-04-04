@@ -132,5 +132,6 @@ const PlayistOption = ({ videoData }) => {
       </div>
     </div>
   );
+  
 };
 export { PlayistOption };
